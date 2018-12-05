@@ -8,6 +8,13 @@
 /** 
  * body
  */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
@@ -201,28 +208,39 @@ body {
     padding: 30px 0;
 }
 
-#products>.container>.nav-tabs {
+#products>.container .nav-tabs {
     padding: 0 20px;
 }
 
-#products>.container>.nav-tabs>li {}
-
-#products>.container>.nav-tabs>li.active {}
-
-#products>.container>.nav-tabs>li>a {
+#products>.container .nav-tabs>li>a {
     color: #333;
     font-size: 16px;
 }
 
-#products>.container>.nav-tabs>li>a:hover {}
-
-#products>.container>.nav-tabs>li.active>a {
+#products>.container .nav-tabs>li.active>a {
     background-color: transparent;
     border: none;
     border-bottom: 3px solid red;
 }
 
-#products>.container>.nav-tabs>li.active>a:hover {}
+#products>.container>.tab-content .row {
+    margin: 20px 0 0 0;
+}
+
+#products>.container>.tab-content .row>div {
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+}
+
+#products>.container>.tab-content .row .panel-zk>.panel-body {
+    margin-right: 120px;
+    height: 150px;
+}
+
+/** 
+ * 
+ */
+
 
 /* 
  * customize bootstrap
@@ -355,4 +373,58 @@ fieldset[disabled] .navbar-zk .btn-link:hover,
 .navbar-zk .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-zk .btn-link:focus {
     color: #ccc;
+}
+
+.panel-zk {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 1px 1px 5px #c0c0c0;
+}
+
+.panel-zk>.panel-heading {
+    color: #333;
+    float: right;
+    width: 120px;
+    padding: 0;
+    height: 150px;
+    border-left: 1px dashed #c0c0c0;
+    text-align: center;
+    position: relative;
+}
+
+.panel-zk>.panel-heading::before {
+    content: ' ';
+    background-color: #eee;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.panel-zk>.panel-heading::after {
+    content: ' ';
+    background-color: #eee;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    box-shadow: 0 2px 2px #c0c0c0 inset;
+}
+
+.panel-zk>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-zk>.panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+}
+
+.panel-zk.panel-active {
+    background-color: red;
 }
