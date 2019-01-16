@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="title">products name</h2>
+<h3 id="price">description</h3>
+<div id="desc"></div>
+
+
+<script>
+    function Products() {
+        /* title */
+        this.title = '';
+        this.price = 0;
+        this.images = [];
+        this.desc = '';
+    }
+
+    /*
+     *构造函数
+     *方法1
+     */
+    Products.prototype = {
+        buy: function () {
+
+        },
+        getDetails: function () {
+
+        },
+        /*一般都会定义*/
+        bindDOM: function () {
+
+        },
+        bindEvents: function () {
+
+        }
+    }
+
+    /*
+     *构造函数
+     *方法2
+     */
+    Products.prototype.getInfo = function () {
+
+    }
+
+    window.onload = function () {
+        /*实例化对象*/
+        var iphone32g = new Products();
+        iphone32g.title = 'Apple rose golden';
+        iphone32g.price = 4988 + '元';
+        iphone32g.desc = 'The last day!!!';
+        /* get element */
+        var title = document.querySelector('#title');
+        var price = document.querySelector('#price');
+        var desc = document.querySelector('#desc');
+        /*  */
+        title.innerHTML = iphone32g.title;
+        price.innerHTML = iphone32g.price;
+        desc.innerHTML = iphone32g.desc;
+
+    }
+</script>
+</body>
+</html>
