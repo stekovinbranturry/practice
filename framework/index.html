@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div {
+        height: 100px;
+        width: 100px;
+        background-color: orange;
+    }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+<script src="zk.js"></script>
+<script>
+$$.select('div').innerHTML = 'TEST';
+$$.on('div', 'click', fn);
+
+function fn() {
+    alert('message?: DOMString');
+};
+// $$.event.off('div', 'click', fn);
+</script>
