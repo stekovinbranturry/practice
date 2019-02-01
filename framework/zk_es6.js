@@ -3,43 +3,34 @@
  */
 
 /*main*/
-var ZK = function() {};
+class ZK {};
 
-ZK.prototype = {
-    extend: function(tar, source) {
-        for (var i in source) {
-            tar[i] = source[i];
-        }
-        return tar;
-    },
-};
-
-var $$ = new ZK();
+const $$ = new ZK();
 /*data type*/
-$$.extend($$, {
+Object.assign(ZK.prototype, {
 
-    isNumber: function(val) {
+    isNumber(val) {
         return typeof val === 'number' && isFinite(val);
     },
-    isBoolean: function(val) {
+    isBoolean(val) {
         return typeof val === "boolean";
     },
-    isString: function(val) {
+    isString(val) {
         return typeof val === "string";
     },
-    isUndefined: function(val) {
+    isUndefined(val) {
         return typeof val === "undefined";
     },
-    isObj: function(str) {
+    isObj(str) {
         if (str === null || typeof str === 'undefined') {
             return false;
         }
         return typeof str === 'object';
     },
-    isNull: function(val) {
+    isNull(val) {
         return val === null;
     },
-    isArray: function(arr) {
+    isArray(arr) {
         if (arr === null || typeof arr === 'undefined') {
             return false;
         }
@@ -48,21 +39,21 @@ $$.extend($$, {
 
 });
 /*string*/
-$$.extend($$, {
+Object.assign(ZK.prototype, {
     //remove left space
-    ltrim: function(str) {
+    ltrim(str) {
         return str.replace(/(^\s*)/g, '');
     },
     //remove right space
-    rtrim: function(str) {
+    rtrim(str) {
         return str.replace(/(\s*$)/g, '');
     },
     //remove all space
-    trim: function(str) {
+    trim(str) {
         return str.replace(/(^\s*)|(\s*$)/g, '');
     },
     //simple bind data
-    formateString: function(str, data) {
+    formateString(str, data) {
         return str.replace(/@\((\w+)\)/g, function(match, key) {
             return typeof data[key] === "undefined" ? '' : data[key]
         });
@@ -70,27 +61,27 @@ $$.extend($$, {
 });
 
 /*general*/
-$$.extend($$, {
+Object.assign(ZK.prototype, {
     /*selector*/
-    select: function(selector) {
+    select(selector) {
         return $$.isString(selector) ? document.querySelector(selector) : selector;
     },
 });
 
 /*event*/
-$$.extend($$, {
+Object.assign(ZK.prototype, {
     //get event
-    getEvent: function(event) {
+    getEvent(event) {
         return event ? event : window.event;
     },
     //get target
-    getTarget: function(event) {
-        var e = $$.getEvent(event);
+    getTarget(event) {
+        const e = $$.getEvent(event);
         return e.target || e.srcElement;
     },
     //prevent default event
-    preventDefault: function(event) {
-        var event = $$.getEvent(event);
+    preventDefault(event) {
+        const event = $$.getEvent(event);
         if (event.preventDefault) {
             event.preventDefault();
         } else {
@@ -98,8 +89,8 @@ $$.extend($$, {
         }
     },
     //stop propagation
-    stopPropagation: function(event) {
-        var event = $$.getEvent(event);
+    stopPropagation(event) {
+        const event = $$.getEvent(event);
         if (event.stopPropagation) {
             event.stopPropagation();
         } else {
@@ -107,17 +98,17 @@ $$.extend($$, {
         }
     },
     // add event listener
-    on: function(s, e, fn) {
+    on(s, e, fn) {
         const selector = $$.isString(s) ? document.querySelector(s) : s;
         selector.addEventListener(e, fn);
     },
     // remove event listener
-    off: function(s, e, fn) {
+    off(s, e, fn) {
         const selector = $$.isString(s) ? document.querySelector(s) : s;
         selector.removeEventListener(e, fn);
     },
     // click event
-    click: function(s, fn) {
+    click(s, fn) {
         $$.on(s, 'click', fn);
     },
 });

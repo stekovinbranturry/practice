@@ -20,11 +20,17 @@
 </html>
 <script src="zk.js"></script>
 <script>
-$$.select('div').innerHTML = 'TEST';
-$$.on('div', 'click', fn);
+// $$.select('div').innerHTML = 'TEST';
+$$.click('div', function() {
+    this.innerHTML = 'TEST';
+});
 
+/*function fn() {
+    
+};*/
+/*$$.on('div', 'click', fn);
 function fn() {
-    alert('message?: DOMString');
-};
+alert('message?: DOMString');
+};*/
 // $$.event.off('div', 'click', fn);
 </script>
