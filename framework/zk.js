@@ -73,8 +73,31 @@ $$.extend($$, {
 $$.extend($$, {
     /*selector*/
     select: function(selector) {
-        return $$.isString(selector) ? document.querySelector(selector) : selector;
+        var arr = $$.trim(selector).split(',');
+        var len = arr.length;
+        var result = [];
+        if (len == 1) {
+            return document.querySelector(selector);
+        } else {
+            for (var i = 0; i < len; i++) {
+                var dom = document.querySelector(arr[i]);
+                result.push(dom);
+            }
+        }
+        return result;
     },
+    /*select by class name*/
+    $class: function(name) {
+        var dom = document.getElementsByTagName('*');
+        var arr = [];
+
+        for (var i = 0, len = dom.length; i < len; i++) {
+            if (dom[i].className == name) {
+                arr.push(dom[i]);
+            }
+        }
+        return arr;
+    }
 });
 
 /*event*/
@@ -124,8 +147,45 @@ $$.extend($$, {
 
 /*css*/
 
-/*property*/
-
+/*attibution*/
+$$.extend($$, {
+    /*attribution*/
+    attr: function(dom, key, value) {
+        if (value) {
+            dom.setAttribute(key, value);
+        } else {
+            return dom.getAttribute(key);
+        }
+    },
+    /*addClass*/
+    addClass: function(dom, name) {
+        dom.className = dom.className + ' ' + name;
+    },
+    /*removeClass*/
+    removeClass: function(dom, name) {
+        dom.className = dom.className.replace(name, '');
+    },
+    /*hasClass*/
+    hasClass: function(dom, name) {
+        var arr = dom.className.split(' ');
+        var check = false;
+        for (i of arr) {
+            if ($$.trim(i) === name) {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    },
+    /*html*/
+    html: function(dom, value) {
+        if (value) {
+            dom.innerHTML = value;
+        } else {
+            return dom.innerHTML;
+        }
+    }
+});
 /*dom*/
 
 /*cache cookie*/

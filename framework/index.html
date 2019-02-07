@@ -9,22 +9,43 @@
         height: 100px;
         width: 100px;
         background-color: orange;
+        border: 1px solid #333;
+    }
+
+    .larger {
+        height: 200px;
+        width: 200px;
+        background-color: orange;
+        border: 1px solid #333;
     }
     </style>
 </head>
 
 <body>
     <div></div>
+    <div class="  test   a    b c">dfvdsfd</div>
+    <div id="test"></div>
+    <a href="sdssdfs"></a>
 </body>
 
 </html>
 <script src="zk.js"></script>
 <script>
 // $$.select('div').innerHTML = 'TEST';
-$$.click('div', function() {
-    this.innerHTML = 'TEST';
-});
+// $$.click('div', function() {
+// this.innerHTML = 'TEST';
+// });
+// const setInnerHtml = (dom) => {
+//     for (i of dom) {
+//         i.innerHTML = 'test';
+//     }
+// };
+// const dom = $$.select('.test  ,   #test');
+// setInnerHtml(dom);
 
+
+
+// $$.$class('test').innerHTML = 'Test select class name';
 /*function fn() {
     
 };*/
@@ -33,4 +54,19 @@ function fn() {
 alert('message?: DOMString');
 };*/
 // $$.event.off('div', 'click', fn);
+// const attr = (dom, key, value) => {
+//     value ? dom.setAttribute(key, value) : dom.getAttribute(key);
+// };
+// const dom = $$.select('#test');
+// console.log(dom);
+// const getAttr = $$.attr(dom, 'class');
+const dom = document.querySelector('.test');
+console.log(dom);
+// // const getAttr = dom.getAttribute('class');
+// console.log(getAttr);
+// const setAttr = $$.attr(dom, 'class', 'larger');
+// $$.addClass(dom, 'larger');
+// $$.removeClass(dom, 'a');
+// console.log($$.hasClass(dom, 'ab'));
+$$.html(dom, 'test');
 </script>
