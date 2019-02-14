@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
 
+<body>
 </body>
 <script>
-    /*赋值给window*/
-    /*(function () {
-        var fn = function () {
-            alert('赋值给window');
+/*立即函数本身包含赋值与调用，不需要再调用*/
+(function() {
+    var name = 'a';
+    console.log(name);
+})();
+(function() {
+    var name = 'b';
+    console.log(name);
+})();
+// 输出：a b
+/*赋值给window*/
+(function() {
+    var fn = function() {
+        alert('赋值给window');
+    }
+
+    window.fn1 = fn;
+})();
+
+fn1();
+
+/*定义一个json*/
+(function() {
+    var fn = function() {
+        alert('定义一个json');
+    }
+    var json = {
+        fn: fn
+    };
+    window.$$ = json;
+})();
+
+$$.fn();
+
+/*传参*/
+(function(w) {
+    var json = {
+        fn: function() {
+            alert('传参');
         }
+    };
+    w.$$ = json;
+})(window);
 
-        window.fn1 = fn;
-    })()
+$$.fn();
 
-    fn1();*/
-
-    /*定义一个json*/
-/*    (function () {
-        var fn = function () {
-            alert('定义一个json');
+/*访问立即函数中的属性*/
+var myFun = (function() {
+    return {
+        fn: function() {
+            alert('访问立即函数中的属性');
         }
-        var json = {
-            fn: fn
-        };
-        window.$$ = json;
-    })()
+    }
+})();
 
-    $$.fn();*/
-
-    /*传参*/
-    (function (w) {
-        var json = {
-            fn: function () {
-                alert('传参');
-            }
-        };
-        w.$$ = json;
-    })(window)
-
-    $$.fn();
-
-    /*访问立即函数中的属性*/
-    /*var myFun = (function () {
-        return {
-            fn: function () {
-                alert('访问立即函数中的属性');
-            }
-        }
-    })()
-
-    myFun.fn();*/
+myFun.fn();
 </script>
+
 </html>

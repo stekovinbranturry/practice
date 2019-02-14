@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>this.element封装框架</title>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+<script>
+var framework = function(selector) {
+    this.element = [];
+    return this.$all(selector);
+}
+
+framework.prototype = {
+    $all: function(selector) {
+        this.element = document.querySelectorAll(selector);
+    },
+
+    hide: function() {
+        var dom = this.element;
+        for (var i = 0; i < dom.length; i++) {
+            dom[i].style.display = 'none';
+        }
+        return this;
+    },
+
+    show: function() {
+        var dom = this.element;
+        for (var i = 0; i < dom.length; i++) {
+            dom[i].style.display = 'block';
+        }
+    }
+};
+
+var $ = function(selector) {
+    return new framework(selector);
+};
+
+$('div').hide().show();
+</script>
+
+</html>
