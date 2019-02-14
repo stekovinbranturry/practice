@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        height: 100px;
+        width: 100px;
+        background-color: orange;
+        border: 1px solid #333;
+        position: absolute;
+    }
+
+    #btn {
+        width: 50px;
+        height: 20px;
+        background-color: red;
+    }
+
+    .larger {
+        height: 200px;
+        width: 200px;
+        background-color: orange;
+        border: 1px solid #333;
+    }
+    </style>
+</head>
+
+<body>
+    <button id="btn"></button>
+    <div id="test"></div>
+</body>
+
+</html>
+<script src="zk.js"></script>
+<script>
+var btn = document.querySelector('#btn');
+var div = document.querySelector('div');
+var timer;
+var interval = 16;
+var speed = 10;
+var moveCalledTimes = 0;
+var duration = 64;
+
+btn.onclick = function() {
+    timer = setInterval(move, interval);
+}
+
+function move() {
+    var totalTimes = duration / interval;
+
+    if (moveCalledTimes <= totalTimes) {
+        div.style.left = div.offsetLeft + speed + 'px';
+    } else {
+        clearInterval(timer);
+    }
+
+    moveCalledTimes++;
+}
+</script>

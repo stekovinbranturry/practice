@@ -11,6 +11,7 @@
         background-color: orange;
         border: 1px solid #333;
     }
+
     .larger {
         height: 200px;
         width: 200px;
@@ -28,7 +29,7 @@
 </body>
 
 </html>
-<script src="zk_closure.js"></script>
+<script src="zk.js"></script>
 <script>
 // $$.select('div').innerHTML = 'TEST';
 // $$.click('div', function() {
@@ -59,13 +60,13 @@ alert('message?: DOMString');
 // const dom = $$.select('#test');
 // console.log(dom);
 // const getAttr = $$.attr(dom, 'class');
-const dom = document.querySelector('.test');
-console.log(dom);
+// const dom = document.querySelector('.test');
+// console.log(dom);
 // // const getAttr = dom.getAttribute('class');
 // console.log(getAttr);
 // const setAttr = $$.attr(dom, 'class', 'larger');
 // $$.addClass(dom, 'larger');
 // $$.removeClass(dom, 'a');
 // console.log($$.hasClass(dom, 'ab'));
-$$.html(dom, 'test');
+// $$.html(dom, 'test');
 </script>
