@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// // 1.没有参数
+// () => {};
+// // 2. 单一参数
+// let fn = x => x * x;
+// // 3. 多个参数
+// let fn = (x, y) => x + y;   // 单一表达式
+// let fn = (x, y) => {
+// // 函数声明
+// };
+// // 4. 加括号的函数体返回对象字面表达式：
+// let fn = (x, y) => ({foo: bar});
+// function Person() {
+//   // Person() 构造函数定义 `this`作为它自己的实例.
+//   this.age = 0;
+
+//   setInterval(function growUp() {
+//     // 在非严格模式, growUp()函数定义 `this`作为全局对象, 
+//     // 与在 Person()构造函数中定义的 `this`并不相同.
+//     this.age++;
+//   }, 1000);
+// }
+
+// var p = new Person();
+
+// console.log(p.age);
+
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| 正确地指向 p 实例
+  }, 1000);
+}
+
+var p = new Person();
+console.log(p.age);
+</script>
+</html>
