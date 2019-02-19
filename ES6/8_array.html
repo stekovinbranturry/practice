@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+
+<body>
+</body>
+<script>
+var arr = [1, 2];
+
+function fn(array, ...items) {
+    array.push(...items);
+}
+fn(arr, ...[2, 3, 4]);
+
+// console.log(arr2)
+console.log(arr)
+</script>
+
+</html>

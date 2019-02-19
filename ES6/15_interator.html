@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>iterator</title>
+</head>
+
+<body>
+</body>
+<script>
+/*1. Array*/
+console.log('Array: ')
+const arr = [1, 2, 3, 4, 5];
+for (item of arr) {
+    console.log(item + 1);
+}
+/*2. Set*/
+console.log('Set: ')
+var set = new Set();
+set.add('a').add('b').add('c').add('b');
+for (item of set) {
+    console.log(item);
+}
+/*3. Map*/
+console.log('Map: ')
+var map = new Map();
+// map.set('a', 'apple');
+// map.set('b', 'banana');
+// map.set('c', 'chengzi');
+map.set('a', 'apple').set('b', 'banana').set('c', 'chengzi');
+for ([name, value] of map) {
+    console.log([name, value]);
+}
+/*4. String*/
+console.log('String: ');
+const str = 'string';
+for (let item of str) {
+    console.log(item);
+}
+/*5. DOM NOdeList*/
+let paras = document.querySelectorAll("p");
+for (let p of paras) {
+    p.classList.add("test");
+}
+/*6. arguments*/
+console.log('Arguments: ')
+
+function f() {
+    for (item of arguments) {
+        console.log(item);
+    }
+}
+
+f(1, 2, 3);
+</script>
+
+</html>

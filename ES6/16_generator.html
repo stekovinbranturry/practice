@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>generator function</title>
+</head>
+
+<body>
+</body>
+<script>
+function* g() {
+    yield 'hello';
+    yield 'world'
+    return 'hello world';
+}
+
+const foo = g();
+
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());
+console.log(foo.next());
+
+for (v of foo) {
+    console.log(v);
+}
+// hello
+// world
+</script>
+
+</html>
