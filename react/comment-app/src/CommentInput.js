@@ -23,8 +23,10 @@ class CommentInput extends Component {
 
   handleSubmit() {
     if (this.props.onSubmit) {
-      const { username, content } = this.state
-      this.props.onSubmit({ username, content })
+      this.props.onSubmit({
+        username: this.state.username,
+        content: this.state.content
+      })
     }
     this.setState({ content: '' })
   }
@@ -36,7 +38,7 @@ class CommentInput extends Component {
           <span className='comment-field-name'>用户名：</span>
           <div className='comment-field-input'>
             <input
-              value={this.props.username}
+              value={this.state.username}
               onChange={this.handleUsernameChange.bind(this)} />
           </div>
         </div>
@@ -44,7 +46,7 @@ class CommentInput extends Component {
           <span className='comment-field-name'>评论内容：</span>
           <div className='comment-field-input'>
             <textarea
-              value={this.props.content}
+              value={this.state.content}
               onChange={this.handleContentChange.bind(this)} />
           </div>
         </div>
