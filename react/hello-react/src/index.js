@@ -354,3 +354,135 @@ function printBook() {
 }
 
 printBook()
+
+function showPercentage() {
+  class Input extends Component {
+    constructor() {
+      super()
+      this.state = {
+        number: 0
+      }
+    }
+    handleNumberOnChange(e) {
+      this.setState(
+        { number: e.target.value },
+        () => {
+          if (this.props.onSubmit) {
+            const { number } = this.state
+            this.props.onSubmit({ number })
+          }
+        }
+      )
+    }
+    render() {
+      return (
+        <div>
+          <input type='number'
+            onChange={this.handleNumberOnChange.bind(this)} />
+        </div>
+      )
+    }
+  }
+
+  class PercentageShower extends Component {
+    render() {
+      return (
+        <div>
+          {Math.round(this.props.number * 10000) / 100}%
+        </div>
+      )
+    }
+  }
+
+  class PercentageApp extends Component {
+    constructor() {
+      super()
+      this.state = {
+        number: 0
+      }
+    }
+
+    handleOnSubmit(number) {
+      this.setState(number)
+    }
+    render() {
+      return (
+        <div>
+          <Input onSubmit={this.handleOnSubmit.bind(this)} />
+          <PercentageShower number={this.state.number} />
+        </div>
+      )
+    }
+  }
+
+  ReactDOM.render(
+    <PercentageApp />,
+    document.querySelector('#percentage')
+  )
+}
+
+showPercentage()
+
+function showClock() {
+  class Clock extends Component {
+    constructor() {
+      super()
+      this.state = {
+        clock: new Date()
+      }
+    }
+
+    componentWillMount() {
+      this.timer = setInterval(() => {
+        this.setState({
+          clock: new Date()
+        })
+      }, 1000)
+    }
+
+    render() {
+      return (
+        <div>
+          {this.state.clock.toLocaleTimeString()}
+        </div>
+      )
+    }
+  }
+
+  class Index extends Component {
+    constructor() {
+      super()
+      this.state = {
+        isShown: true
+      }
+    }
+
+    isClockShown() {
+      this.setState({
+        isShown: !this.state.isShown
+      })
+    }
+    render() {
+      return (
+        <div>
+          {this.state.isShown ? <Clock /> : null}
+          <button onClick={this.isClockShown.bind(this)}>
+            Show or hide clock
+          </button>
+        </div>
+      )
+    }
+
+    componentWillUnmount() {
+      clearInterval(this.timer)
+    }
+  }
+
+  ReactDOM.render(
+    <Index />,
+    document.querySelector('#clock')
+  )
+}
+
+showClock()
+
