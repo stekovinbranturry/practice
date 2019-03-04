@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import './index.css'
 
 function renderContent(header, content, footer) {
@@ -486,3 +487,29 @@ function showClock() {
 
 showClock()
 
+function containerComponent() {
+  class Card extends Component {
+    render() {
+      return (
+        <div className='card'>
+          <div className='card-content'>
+            {this.props.children}
+          </div>
+        </div>
+      )
+    }
+  }
+
+  ReactDOM.render(
+    <Card children={
+      <div>
+        <h2>React.js 小书</h2>
+        <div>开源、免费、专业、简单</div>
+        订阅：<input />
+      </div>
+    } />,
+    document.querySelector('#container')
+  )
+}
+
+containerComponent()
