@@ -1,0 +1,174 @@
+// 1. 变量 Variable
+$main-color: #000;
+nav {
+  $width: 100px;
+  width: $width;
+  background-color: $main-color;
+}
+
+$highlight-color: #fff;
+$highlight-border: 1px solid $highlight-color;
+.border {
+  border: $highlight-border;
+}
+
+// 2. 嵌套CSS 规则  Nesting
+main {
+  color: $main-color;
+  .nav {
+    background-color: $highlight-color;
+    border: $highlight-border;
+    .article {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  p {
+    font-size: 10%;
+  }
+}
+
+// 2-1. 父选择器的标识符&;
+a {
+  //a:link、a:visited、a:hover、a:active
+  color: blue;
+  &:visited {
+    color: green;
+  }
+  &:hover {
+    color: yellow;
+  }
+  &:active {
+    color: cyan;
+  }
+}
+
+.parents {
+  margin: 20px;
+  body.ie & {
+    margin: 20px;
+  }
+}
+
+// 2-2. 群组选择器的嵌套;
+
+nav,
+section {
+  margin: 20px;
+  a {
+    //a:link、a:visited、a:hover、a:active
+    color: blue;
+    &:visited {
+      color: green;
+    }
+    &:hover {
+      color: yellow;
+    }
+    &:active {
+      color: cyan;
+    }
+  }
+}
+// 2-3. 子组合选择器和同层组合选择器：>、+和~;
+article {
+  ~ article {
+    border-top: 1px dashed #ccc;
+  }
+  > section {
+    background: #eee;
+  }
+  dl > {
+    dt {
+      color: #333;
+    }
+    dd {
+      color: #555;
+    }
+  }
+  nav + & {
+    margin-top: 0;
+  }
+}
+
+// 2-4 嵌套属性
+.selected {
+  border: {
+    width: 1px;
+    color: $highlight-color;
+    style: solid;
+  }
+  .border2 {
+    border: 1px solid #789 {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+// 3. 导入SASS文件  @import
+@import "reset";
+
+// 3-2. 默认变量值;
+$default-color: #666 !default;
+.defalut {
+  color: $default-color;
+}
+
+// 3-3. 嵌套导入;
+.blue-theme {
+  @import "theme";
+}
+
+// 4. 静默注释
+body {
+  color: #333; // 这种注释内容不会出现在生成的css文件中
+  padding: 0; /* 这种注释内容会出现在生成的css文件中 */
+}
+
+// 5. 混合器 Mixins
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.notice {
+  margin: 30px;
+  padding: 3px;
+  @include rounded-corners;
+}
+
+// 5-1. 混合器传参
+@mixin link-color($link, $visited, $hover, $active) {
+  color: $link;
+  &:visited {
+    color: $visited;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
+
+.demo-mixin {
+  padding: 20px;
+  a {
+    @include link-color(#111, #222222, #333333, #444444);
+  }
+}
+
+// 6. 使用选择器继承来精简CSS
+//通过选择器继承继承样式
+.error {
+  border: 1px red;
+  background-color: #fdd;
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}
+.error a {
+  color: #777;
+}
