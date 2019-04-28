@@ -11,27 +11,27 @@ class Header extends Component {
 						<img src={navLogo} alt="Nav logo" />
 					</div>
 
-					<button className="btn write-btn">
+					<a className="btn write-btn" target="_blank">
 						<i className="iconfont ic-write" />
 						写文章
-					</button>
-					<button className="btn sign-up" id="sign_up">
+					</a>
+					<a className="btn sign-up" id="sign_up">
 						注册
-					</button>
-					<button className="btn log-in" id="sign_in">
+					</a>
+					<a className="btn log-in" id="sign_in">
 						登录
-					</button>
+					</a>
 
 					<div className="beta">
-						<span>
+						<a>
 							<img src={navBeta} alt="beta" />
-						</span>
+						</a>
 					</div>
 
 					<div className="style-mode">
-						<span className="style-mode-btn">
+						<a className="style-mode-btn">
 							<i className="iconfont ic-navigation-mode" />
-						</span>
+						</a>
 					</div>
 					<div className="container">
 						<div className="navbar-header">
@@ -69,9 +69,9 @@ class Header extends Component {
 											placeholder="搜索"
 											className="search-input"
 										/>
-										<span className="search-btn">
+										<a className="search-btn">
 											<i className="iconfont ic-search" />
-										</span>
+										</a>
 									</form>
 								</li>
 							</ul>

@@ -118,6 +118,7 @@
 }
 
 .search-recent .search-recent-item-wrap li a span {
+  vertical-align: middle;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -145,12 +146,7 @@
   background-color: #2f2f2f;
 }
 
-.reader-night-mode
-.search-recent
-.search-recent-item-wrap
-li
-a
-.ic-unfollow:hover,
+.reader-night-mode .search-recent .search-recent-item-wrap li a .ic-unfollow:hover,
 .reader-night-mode .search-recent .search-recent-item-wrap li a span {
   color: #c8c8c8;
 }
@@ -174,7 +170,7 @@ a
 }
 
 .user-follow-button.on i:before {
-  content: '\E610';
+  content: "\E610";
 }
 
 .user-follow-button.on:hover {
@@ -183,7 +179,7 @@ a
 }
 
 .user-follow-button.on:hover i:before {
-  content: '\E631';
+  content: "\E631";
 }
 
 .user-follow-button.off {
@@ -197,7 +193,7 @@ a
 }
 
 .user-follow-button.off i:before {
-  content: '\E611';
+  content: "\E611";
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -347,9 +343,9 @@ select {
 }
 
 button,
-html input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -369,26 +365,26 @@ input {
   line-height: normal;
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type='search'] {
+input[type="search"] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
 
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -437,9 +433,9 @@ th {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  a[href^='#']:after,
-  a[href^='javascript:']:after {
-    content: '';
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
   }
   blockquote,
   pre {
@@ -597,7 +593,7 @@ hr {
   clip: auto;
 }
 
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -939,7 +935,7 @@ dd {
 
 .dl-horizontal dd:after,
 .dl-horizontal dd:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -997,7 +993,7 @@ blockquote small {
 blockquote .small:before,
 blockquote footer:before,
 blockquote small:before {
-  content: '\2014   \A0';
+  content: "\2014   \A0";
 }
 
 .blockquote-reverse,
@@ -1015,7 +1011,7 @@ blockquote.pull-right {
 blockquote.pull-right .small:before,
 blockquote.pull-right footer:before,
 blockquote.pull-right small:before {
-  content: '';
+  content: "";
 }
 
 .blockquote-reverse .small:after,
@@ -1024,7 +1020,7 @@ blockquote.pull-right small:before {
 blockquote.pull-right .small:after,
 blockquote.pull-right footer:after,
 blockquote.pull-right small:after {
-  content: '\A0   \2014';
+  content: "\A0   \2014";
 }
 
 address {
@@ -1105,7 +1101,7 @@ pre code {
 
 .container:after,
 .container:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -1140,7 +1136,7 @@ pre code {
 
 .container-fluid:after,
 .container-fluid:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -1155,7 +1151,7 @@ pre code {
 
 .row:after,
 .row:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -2753,14 +2749,14 @@ th {
   background-color: #f5f5f5;
 }
 
-table col[class*='col-'] {
+table col[class*="col-"] {
   position: static;
   float: none;
   display: table-column;
 }
 
-table td[class*='col-'],
-table th[class*='col-'] {
+table td[class*="col-"],
+table th[class*="col-"] {
   position: static;
   float: none;
   display: table-cell;
@@ -2960,23 +2956,23 @@ label {
   font-weight: 700;
 }
 
-input[type='search'] {
+input[type="search"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   margin: 4px 0 0;
   margin-top: 1px\9;
   line-height: normal;
 }
 
-input[type='file'] {
+input[type="file"] {
   display: block;
 }
 
-input[type='range'] {
+input[type="range"] {
   display: block;
   width: 100%;
 }
@@ -2986,9 +2982,9 @@ select[size] {
   height: auto;
 }
 
-input[type='checkbox']:focus,
-input[type='file']:focus,
-input[type='radio']:focus {
+input[type="checkbox"]:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -3063,59 +3059,59 @@ textarea.form-control {
   height: auto;
 }
 
-input[type='search'] {
+input[type="search"] {
   -webkit-appearance: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type='date'].form-control,
-  input[type='datetime-local'].form-control,
-  input[type='month'].form-control,
-  input[type='time'].form-control {
+  input[type="date"].form-control,
+  input[type="datetime-local"].form-control,
+  input[type="month"].form-control,
+  input[type="time"].form-control {
     line-height: 34px;
   }
-  .input-group-sm > .input-group-btn > input[type='date'].btn,
-  .input-group-sm > .input-group-btn > input[type='datetime-local'].btn,
-  .input-group-sm > .input-group-btn > input[type='month'].btn,
-  .input-group-sm > .input-group-btn > input[type='time'].btn,
-  .input-group-sm > input[type='date'].form-control,
-  .input-group-sm > input[type='date'].input-group-addon,
-  .input-group-sm > input[type='datetime-local'].form-control,
-  .input-group-sm > input[type='datetime-local'].input-group-addon,
-  .input-group-sm > input[type='month'].form-control,
-  .input-group-sm > input[type='month'].input-group-addon,
-  .input-group-sm > input[type='time'].form-control,
-  .input-group-sm > input[type='time'].input-group-addon,
-  .input-group-sm input[type='date'],
-  .input-group-sm input[type='datetime-local'],
-  .input-group-sm input[type='month'],
-  .input-group-sm input[type='time'],
-  input[type='date'].input-sm,
-  input[type='datetime-local'].input-sm,
-  input[type='month'].input-sm,
-  input[type='time'].input-sm {
+  .input-group-sm > .input-group-btn > input[type="date"].btn,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-sm > .input-group-btn > input[type="month"].btn,
+  .input-group-sm > .input-group-btn > input[type="time"].btn,
+  .input-group-sm > input[type="date"].form-control,
+  .input-group-sm > input[type="date"].input-group-addon,
+  .input-group-sm > input[type="datetime-local"].form-control,
+  .input-group-sm > input[type="datetime-local"].input-group-addon,
+  .input-group-sm > input[type="month"].form-control,
+  .input-group-sm > input[type="month"].input-group-addon,
+  .input-group-sm > input[type="time"].form-control,
+  .input-group-sm > input[type="time"].input-group-addon,
+  .input-group-sm input[type="date"],
+  .input-group-sm input[type="datetime-local"],
+  .input-group-sm input[type="month"],
+  .input-group-sm input[type="time"],
+  input[type="date"].input-sm,
+  input[type="datetime-local"].input-sm,
+  input[type="month"].input-sm,
+  input[type="time"].input-sm {
     line-height: 30px;
   }
-  .input-group-lg > .input-group-btn > input[type='date'].btn,
-  .input-group-lg > .input-group-btn > input[type='datetime-local'].btn,
-  .input-group-lg > .input-group-btn > input[type='month'].btn,
-  .input-group-lg > .input-group-btn > input[type='time'].btn,
-  .input-group-lg > input[type='date'].form-control,
-  .input-group-lg > input[type='date'].input-group-addon,
-  .input-group-lg > input[type='datetime-local'].form-control,
-  .input-group-lg > input[type='datetime-local'].input-group-addon,
-  .input-group-lg > input[type='month'].form-control,
-  .input-group-lg > input[type='month'].input-group-addon,
-  .input-group-lg > input[type='time'].form-control,
-  .input-group-lg > input[type='time'].input-group-addon,
-  .input-group-lg input[type='date'],
-  .input-group-lg input[type='datetime-local'],
-  .input-group-lg input[type='month'],
-  .input-group-lg input[type='time'],
-  input[type='date'].input-lg,
-  input[type='datetime-local'].input-lg,
-  input[type='month'].input-lg,
-  input[type='time'].input-lg {
+  .input-group-lg > .input-group-btn > input[type="date"].btn,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-lg > .input-group-btn > input[type="month"].btn,
+  .input-group-lg > .input-group-btn > input[type="time"].btn,
+  .input-group-lg > input[type="date"].form-control,
+  .input-group-lg > input[type="date"].input-group-addon,
+  .input-group-lg > input[type="datetime-local"].form-control,
+  .input-group-lg > input[type="datetime-local"].input-group-addon,
+  .input-group-lg > input[type="month"].form-control,
+  .input-group-lg > input[type="month"].input-group-addon,
+  .input-group-lg > input[type="time"].form-control,
+  .input-group-lg > input[type="time"].input-group-addon,
+  .input-group-lg input[type="date"],
+  .input-group-lg input[type="datetime-local"],
+  .input-group-lg input[type="month"],
+  .input-group-lg input[type="time"],
+  input[type="date"].input-lg,
+  input[type="datetime-local"].input-lg,
+  input[type="month"].input-lg,
+  input[type="time"].input-lg {
     line-height: 46px;
   }
 }
@@ -3141,10 +3137,10 @@ input[type='search'] {
   cursor: pointer;
 }
 
-.checkbox-inline input[type='checkbox'],
-.checkbox input[type='checkbox'],
-.radio-inline input[type='radio'],
-.radio input[type='radio'] {
+.checkbox-inline input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.radio-inline input[type="radio"],
+.radio input[type="radio"] {
   position: absolute;
   margin-left: -20px;
   margin-top: 4px\9;
@@ -3180,12 +3176,12 @@ fieldset[disabled] .checkbox-inline,
 fieldset[disabled] .checkbox label,
 fieldset[disabled] .radio-inline,
 fieldset[disabled] .radio label,
-fieldset[disabled] input[type='checkbox'],
-fieldset[disabled] input[type='radio'],
-input[type='checkbox'].disabled,
-input[type='checkbox'][disabled],
-input[type='radio'].disabled,
-input[type='radio'][disabled] {
+fieldset[disabled] input[type="checkbox"],
+fieldset[disabled] input[type="radio"],
+input[type="checkbox"].disabled,
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="radio"][disabled] {
   cursor: not-allowed;
 }
 
@@ -3524,8 +3520,8 @@ textarea.input-lg {
   .form-inline .radio label {
     padding-left: 0;
   }
-  .form-inline .checkbox input[type='checkbox'],
-  .form-inline .radio input[type='radio'] {
+  .form-inline .checkbox input[type="checkbox"],
+  .form-inline .radio input[type="radio"] {
     position: relative;
     margin-left: 0;
   }
@@ -3555,7 +3551,7 @@ textarea.input-lg {
 
 .form-horizontal .form-group:after,
 .form-horizontal .form-group:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4033,9 +4029,9 @@ fieldset[disabled] .btn-link:hover {
   margin-top: 5px;
 }
 
-input[type='button'].btn-block,
-input[type='reset'].btn-block,
-input[type='submit'].btn-block {
+input[type="button"].btn-block,
+input[type="reset"].btn-block,
+input[type="submit"].btn-block {
   width: 100%;
 }
 
@@ -4219,7 +4215,7 @@ tbody.collapse.in {
   border-top: 0;
   border-bottom: 4px dashed;
   border-bottom: 4px solid\9;
-  content: '';
+  content: "";
 }
 
 .dropup .dropdown-menu,
@@ -4277,7 +4273,7 @@ tbody.collapse.in {
 
 .btn-toolbar:after,
 .btn-toolbar:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4387,7 +4383,7 @@ tbody.collapse.in {
 
 .btn-group-vertical > .btn-group:after,
 .btn-group-vertical > .btn-group:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4430,16 +4426,12 @@ tbody.collapse.in {
 }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
-.btn-group-vertical
-> .btn-group:first-child:not(:last-child)
-> .dropdown-toggle {
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical
-> .btn-group:last-child:not(:first-child)
-> .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4466,10 +4458,10 @@ tbody.collapse.in {
   left: auto;
 }
 
-[data-toggle='buttons'] > .btn-group > .btn input[type='checkbox'],
-[data-toggle='buttons'] > .btn-group > .btn input[type='radio'],
-[data-toggle='buttons'] > .btn input[type='checkbox'],
-[data-toggle='buttons'] > .btn input[type='radio'] {
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn input[type="radio"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -4481,7 +4473,7 @@ tbody.collapse.in {
   border-collapse: separate;
 }
 
-.input-group[class*='col-'] {
+.input-group[class*="col-"] {
   float: none;
   padding-left: 0;
   padding-right: 0;
@@ -4546,8 +4538,8 @@ tbody.collapse.in {
   border-radius: 6px;
 }
 
-.input-group-addon input[type='checkbox'],
-.input-group-addon input[type='radio'] {
+.input-group-addon input[type="checkbox"],
+.input-group-addon input[type="radio"] {
   margin-top: 0;
 }
 
@@ -4620,7 +4612,7 @@ tbody.collapse.in {
 
 .nav:after,
 .nav:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4824,7 +4816,7 @@ tbody.collapse.in {
 
 .navbar:after,
 .navbar:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4840,7 +4832,7 @@ tbody.collapse.in {
 
 .navbar-header:after,
 .navbar-header:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -4866,7 +4858,7 @@ tbody.collapse.in {
 
 .navbar-collapse:after,
 .navbar-collapse:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -5125,8 +5117,8 @@ tbody.collapse.in {
   .navbar-form .radio label {
     padding-left: 0;
   }
-  .navbar-form .checkbox input[type='checkbox'],
-  .navbar-form .radio input[type='radio'] {
+  .navbar-form .checkbox input[type="checkbox"],
+  .navbar-form .radio input[type="radio"] {
     position: relative;
     margin-left: 0;
   }
@@ -5457,7 +5449,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 }
 
 .breadcrumb > li + li:before {
-  content: '/\A0';
+  content: "/\A0";
   padding: 0 5px;
   color: #ccc;
 }
@@ -5584,7 +5576,7 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 
 .pager:after,
 .pager:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -6349,7 +6341,7 @@ button.list-group-item-danger.active:hover {
 
 .panel-body:after,
 .panel-body:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -6403,10 +6395,7 @@ button.list-group-item-danger.active:hover {
 }
 
 .panel > .list-group:first-child .list-group-item:first-child,
-.panel
-> .panel-collapse
-> .list-group:first-child
-.list-group-item:first-child {
+.panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
@@ -6419,11 +6408,7 @@ button.list-group-item-danger.active:hover {
   border-bottom-left-radius: 3px;
 }
 
-.panel
-> .panel-heading
-+ .panel-collapse
-> .list-group
-.list-group-item:first-child {
+.panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6447,16 +6432,8 @@ button.list-group-item-danger.active:hover {
 }
 
 .panel > .table-responsive:first-child > .table:first-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> tbody:first-child
-> tr:first-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> thead:first-child
-> tr:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
 .panel > .table:first-child > thead:first-child > tr:first-child {
@@ -6464,65 +6441,21 @@ button.list-group-item-danger.active:hover {
   border-top-left-radius: 3px;
 }
 
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> tbody:first-child
-> tr:first-child
-td:first-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> tbody:first-child
-> tr:first-child
-th:first-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> thead:first-child
-> tr:first-child
-td:first-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> thead:first-child
-> tr:first-child
-th:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
-.panel
-> .table:first-child
-> thead:first-child
-> tr:first-child
-th:first-child {
+.panel > .table:first-child > thead:first-child > tr:first-child th:first-child {
   border-top-left-radius: 3px;
 }
 
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> tbody:first-child
-> tr:first-child
-td:last-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> tbody:first-child
-> tr:first-child
-th:last-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> thead:first-child
-> tr:first-child
-td:last-child,
-.panel
-> .table-responsive:first-child
-> .table:first-child
-> thead:first-child
-> tr:first-child
-th:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -6531,16 +6464,8 @@ th:last-child,
 }
 
 .panel > .table-responsive:last-child > .table:last-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tbody:last-child
-> tr:last-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tfoot:last-child
-> tr:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table:last-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child {
@@ -6548,30 +6473,10 @@ th:last-child,
   border-bottom-left-radius: 3px;
 }
 
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tbody:last-child
-> tr:last-child
-td:first-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tbody:last-child
-> tr:last-child
-th:first-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tfoot:last-child
-> tr:last-child
-td:first-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tfoot:last-child
-> tr:last-child
-th:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
@@ -6579,30 +6484,10 @@ th:first-child,
   border-bottom-left-radius: 3px;
 }
 
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tbody:last-child
-> tr:last-child
-td:last-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tbody:last-child
-> tr:last-child
-th:last-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tfoot:last-child
-> tr:last-child
-td:last-child,
-.panel
-> .table-responsive:last-child
-> .table:last-child
-> tfoot:last-child
-> tr:last-child
-th:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
@@ -7014,7 +6899,7 @@ button.close {
 
 .modal-header:after,
 .modal-header:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -7044,7 +6929,7 @@ button.close {
 
 .modal-footer:after,
 .modal-footer:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -7301,7 +7186,7 @@ button.close {
 
 .popover > .arrow:after {
   border-width: 10px;
-  content: '';
+  content: "";
 }
 
 .popover.top > .arrow {
@@ -7314,7 +7199,7 @@ button.close {
 }
 
 .popover.top > .arrow:after {
-  content: ' ';
+  content: " ";
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
@@ -7331,7 +7216,7 @@ button.close {
 }
 
 .popover.right > .arrow:after {
-  content: ' ';
+  content: " ";
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
@@ -7348,7 +7233,7 @@ button.close {
 }
 
 .popover.bottom > .arrow:after {
-  content: ' ';
+  content: " ";
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
@@ -7365,7 +7250,7 @@ button.close {
 }
 
 .popover.left > .arrow:after {
-  content: ' ';
+  content: " ";
   right: 1px;
   border-right-width: 0;
   border-left-color: #fff;
@@ -7539,11 +7424,11 @@ button.close {
 }
 
 .carousel-control .icon-prev:before {
-  content: '\2039';
+  content: "\2039";
 }
 
 .carousel-control .icon-next:before {
-  content: '\203A';
+  content: "\203A";
 }
 
 .carousel-indicators {
@@ -7567,7 +7452,8 @@ button.close {
   border: 1px solid #fff;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #000;
+  background-color: #000\9;
+  background-color: transparent;
 }
 
 .carousel-indicators .active {
@@ -7624,7 +7510,7 @@ button.close {
 
 .clearfix:after,
 .clearfix:before {
-  content: ' ';
+  content: " ";
   display: table;
 }
 
@@ -7929,595 +7815,595 @@ button.close {
 }
 
 .ic-info:before {
-  content: '\E60C';
+  content: "\E60C";
 }
 
 .ic-arrow:before {
-  content: '\E61E';
+  content: "\E61E";
 }
 
 .ic-search:before {
-  content: '\E618';
+  content: "\E618";
 }
 
 .ic-qq_connect:before {
-  content: '\E603';
+  content: "\E603";
 }
 
 .ic-douban:before {
-  content: '\E601';
+  content: "\E601";
 }
 
 .ic-location:before {
-  content: '\E627';
+  content: "\E627";
 }
 
 .ic-next:before {
-  content: '\E62D';
+  content: "\E62D";
 }
 
 .ic-previous:before {
-  content: '\E62F';
+  content: "\E62F";
 }
 
 .ic-unfollow:before {
-  content: '\E631';
+  content: "\E631";
 }
 
 .ic-phone:before {
-  content: '\E602';
+  content: "\E602";
 }
 
 .ic-catalog:before {
-  content: '\E694';
+  content: "\E694";
 }
 
 .ic-search-history:before {
-  content: '\E640';
+  content: "\E640";
 }
 
 .ic-share-more:before {
-  content: '\E623';
+  content: "\E623";
 }
 
 .ic-work:before {
-  content: '\E628';
+  content: "\E628";
 }
 
 .ic-share-wechat:before {
-  content: '\E625';
+  content: "\E625";
 }
 
 .ic-education:before {
-  content: '\E62B';
+  content: "\E62B";
 }
 
 .ic-social:before {
-  content: '\E62A';
+  content: "\E62A";
 }
 
 .ic-question:before {
-  content: '\E60D';
+  content: "\E60D";
 }
 
 .ic-google_oauth2:before {
-  content: '\E600';
+  content: "\E600";
 }
 
 .ic-share-weibo:before {
-  content: '\E626';
+  content: "\E626";
 }
 
 .ic-edit-s:before {
-  content: '\E619';
+  content: "\E619";
 }
 
 .ic-wechat:before {
-  content: '\E604';
+  content: "\E604";
 }
 
 .ic-weibo:before {
-  content: '\E605';
+  content: "\E605";
 }
 
 .ic-hot:before {
-  content: '\E607';
+  content: "\E607";
 }
 
 .ic-feed:before {
-  content: '\E608';
+  content: "\E608";
 }
 
 .ic-latestcomments:before {
-  content: '\E609';
+  content: "\E609";
 }
 
 .ic-articles:before {
-  content: '\E60A';
+  content: "\E60A";
 }
 
 .ic-official:before {
-  content: '\E60B';
+  content: "\E60B";
 }
 
 .ic-write:before {
-  content: '\E60E';
+  content: "\E60E";
 }
 
 .ic-discover-collections:before {
-  content: '\E61A';
+  content: "\E61A";
 }
 
 .ic-discover-user:before {
-  content: '\E61B';
+  content: "\E61B";
 }
 
 .ic-back:before {
-  content: '\E61C';
+  content: "\E61C";
 }
 
 .ic-article-mark:before {
-  content: '\E629';
+  content: "\E629";
 }
 
 .ic-article-like:before {
-  content: '\E62C';
+  content: "\E62C";
 }
 
 .ic-collections-followed:before {
-  content: '\E62E';
+  content: "\E62E";
 }
 
 .ic-collection:before {
-  content: '\E615';
+  content: "\E615";
 }
 
 .ic-settings-money:before {
-  content: '\E63A';
+  content: "\E63A";
 }
 
 .ic-settings-profile:before {
-  content: '\E63B';
+  content: "\E63B";
 }
 
 .ic-settings-basic:before {
-  content: '\E63C';
+  content: "\E63C";
 }
 
 .ic-settings-verify:before {
-  content: '\E63D';
+  content: "\E63D";
 }
 
 .ic-settings-account:before {
-  content: '\E63E';
+  content: "\E63E";
 }
 
 .ic-settings-block:before {
-  content: '\E63F';
+  content: "\E63F";
 }
 
 .ic-search-collection:before {
-  content: '\E641';
+  content: "\E641";
 }
 
 .ic-search-notebook:before {
-  content: '\E643';
+  content: "\E643";
 }
 
 .ic-money:before {
-  content: '\E606';
+  content: "\E606";
 }
 
 .ic-comment-emotions:before {
-  content: '\E64A';
+  content: "\E64A";
 }
 
 .ic-comment-at:before {
-  content: '\E64B';
+  content: "\E64B";
 }
 
 .ic-navigation-night:before {
-  content: '\E64D';
+  content: "\E64D";
 }
 
 .ic-navigation-mark:before {
-  content: '\E64F';
+  content: "\E64F";
 }
 
 .ic-navigation-profile:before {
-  content: '\E650';
+  content: "\E650";
 }
 
 .ic-navigation-help:before {
-  content: '\E651';
+  content: "\E651";
 }
 
 .ic-navigation-settings:before {
-  content: '\E652';
+  content: "\E652";
 }
 
 .ic-navigation-wallet:before {
-  content: '\E653';
+  content: "\E653";
 }
 
 .ic-navigation-like:before {
-  content: '\E654';
+  content: "\E654";
 }
 
 .ic-navigation-feedback:before {
-  content: '\E655';
+  content: "\E655";
 }
 
 .ic-filter:before {
-  content: '\E657';
+  content: "\E657";
 }
 
 .ic-subscribed:before {
-  content: '\E630';
+  content: "\E630";
 }
 
 .ic-fail:before {
-  content: '\E65B';
+  content: "\E65B";
 }
 
 .ic-addcollection:before {
-  content: '\E65C';
+  content: "\E65C";
 }
 
 .ic-phonenumber:before {
-  content: '\E65D';
+  content: "\E65D";
 }
 
 .ic-user:before {
-  content: '\E65E';
+  content: "\E65E";
 }
 
 .ic-list-comments:before {
-  content: '\E660';
+  content: "\E660";
 }
 
 .ic-list-like:before {
-  content: '\E661';
+  content: "\E661";
 }
 
 .ic-list-read:before {
-  content: '\E662';
+  content: "\E662";
 }
 
 .ic-followed:before {
-  content: '\E610';
+  content: "\E610";
 }
 
 .ic-follow:before {
-  content: '\E611';
+  content: "\E611";
 }
 
 .ic-friends:before {
-  content: '\E617';
+  content: "\E617";
 }
 
 .ic-like-active:before {
-  content: '\E613';
+  content: "\E613";
 }
 
 .ic-like:before {
-  content: '\E663';
+  content: "\E663";
 }
 
 .ic-navigation-signout:before {
-  content: '\E61D';
+  content: "\E61D";
 }
 
 .ic-others:before {
-  content: '\E633';
+  content: "\E633";
 }
 
 .ic-requests:before {
-  content: '\E635';
+  content: "\E635";
 }
 
 .ic-follows:before {
-  content: '\E636';
+  content: "\E636";
 }
 
 .ic-chats:before {
-  content: '\E637';
+  content: "\E637";
 }
 
 .ic-comments:before {
-  content: '\E656';
+  content: "\E656";
 }
 
 .ic-likes:before {
-  content: '\E664';
+  content: "\E664";
 }
 
 .ic-woman:before {
-  content: '\E645';
+  content: "\E645";
 }
 
 .ic-man:before {
-  content: '\E646';
+  content: "\E646";
 }
 
 .ic-password:before {
-  content: '\E614';
+  content: "\E614";
 }
 
 .ic-ios:before {
-  content: '\E612';
+  content: "\E612";
 }
 
 .ic-error:before {
-  content: '\E648';
+  content: "\E648";
 }
 
 .ic-android:before {
-  content: '\E65F';
+  content: "\E65F";
 }
 
 .ic-verify:before {
-  content: '\E61F';
+  content: "\E61F";
 }
 
 .ic-show:before {
-  content: '\E621';
+  content: "\E621";
 }
 
 .ic-hide:before {
-  content: '\E622';
+  content: "\E622";
 }
 
 .ic-previous-s:before {
-  content: '\E647';
+  content: "\E647";
 }
 
 .ic-next-s:before {
-  content: '\E659';
+  content: "\E659";
 }
 
 .ic-go:before {
-  content: '\E65A';
+  content: "\E65A";
 }
 
 .ic-none:before {
-  content: '\E665';
+  content: "\E665";
 }
 
 .ic-zan-active:before {
-  content: '\E638';
+  content: "\E638";
 }
 
 .ic-comment:before {
-  content: '\E639';
+  content: "\E639";
 }
 
 .ic-zan:before {
-  content: '\E666';
+  content: "\E666";
 }
 
 .ic-share:before {
-  content: '\E683';
+  content: "\E683";
 }
 
 .ic-backtop:before {
-  content: '\E684';
+  content: "\E684";
 }
 
 .ic-addcollectionmodal:before {
-  content: '\E668';
+  content: "\E668";
 }
 
 .ic-link:before {
-  content: '\E616';
+  content: "\E616";
 }
 
 .ic-more:before {
-  content: '\E620';
+  content: "\E620";
 }
 
 .ic-report:before {
-  content: '\E624';
+  content: "\E624";
 }
 
 .ic-block:before {
-  content: '\E632';
+  content: "\E632";
 }
 
 .ic-delete:before {
-  content: '\E66B';
+  content: "\E66B";
 }
 
 .ic-email:before {
-  content: '\E66C';
+  content: "\E66C";
 }
 
 .ic-recommend:before {
-  content: '\E66D';
+  content: "\E66D";
 }
 
 .ic-city:before {
-  content: '\E66E';
+  content: "\E66E";
 }
 
 .ic-recommend-collection:before {
-  content: '\E66F';
+  content: "\E66F";
 }
 
 .ic-recommend-user:before {
-  content: '\E670';
+  content: "\E670";
 }
 
 .ic-article-s:before {
-  content: '\E671';
+  content: "\E671";
 }
 
 .ic-collection-s:before {
-  content: '\E672';
+  content: "\E672";
 }
 
 .ic-subcomment:before {
-  content: '\E698';
+  content: "\E698";
 }
 
 .ic-navigation-discover:before {
-  content: '\E69A';
+  content: "\E69A";
 }
 
 .ic-navigation-notification:before {
-  content: '\E69B';
+  content: "\E69B";
 }
 
 .ic-navigation-follow:before {
-  content: '\E69C';
+  content: "\E69C";
 }
 
 .ic-navigation-download:before {
-  content: '\E69D';
+  content: "\E69D";
 }
 
 .ic-successed:before {
-  content: '\E69E';
+  content: "\E69E";
 }
 
 .ic-unblock:before {
-  content: '\E6A2';
+  content: "\E6A2";
 }
 
 .ic-applying:before {
-  content: '\E6A7';
+  content: "\E6A7";
 }
 
 .ic-addpeople:before {
-  content: '\E6A8';
+  content: "\E6A8";
 }
 
 .ic-mark:before {
-  content: '\E6AF';
+  content: "\E6AF";
 }
 
 .ic-search-user:before {
-  content: '\E6B0';
+  content: "\E6B0";
 }
 
 .ic-search-note:before {
-  content: '\E6B1';
+  content: "\E6B1";
 }
 
 .ic-picture:before {
-  content: '\E6B2';
+  content: "\E6B2";
 }
 
 .ic-navigation-mode:before {
-  content: '\E6B5';
+  content: "\E6B5";
 }
 
 .ic-mark-active:before {
-  content: '\E6B7';
+  content: "\E6B7";
 }
 
 .ic-note-requests:before {
-  content: '\E6BC';
+  content: "\E6BC";
 }
 
 .ic-latest:before {
-  content: '\E6E7';
+  content: "\E6E7";
 }
 
 .ic-search-change:before {
-  content: '\E6E6';
+  content: "\E6E6";
 }
 
 .ic-schoolyard:before {
-  content: '\E6EB';
+  content: "\E6EB";
 }
 
 .ic-candy:before {
-  content: '\E6EC';
+  content: "\E6EC";
 }
 
 .ic-qrcode:before {
-  content: '\E6ED';
+  content: "\E6ED";
 }
 
 .ic-paid1:before {
-  content: '\E6F0';
+  content: "\E6F0";
 }
 
 .ic-tag:before {
-  content: '\E6F3';
+  content: "\E6F3";
 }
 
 .ic-club:before {
-  content: '\E6FB';
+  content: "\E6FB";
 }
 
 .ic-audio:before {
-  content: '\E634';
+  content: "\E634";
 }
 
 .ic-icon_jewel:before {
-  content: '\E642';
+  content: "\E642";
 }
 
 .ic-icon_more:before {
-  content: '\E644';
+  content: "\E644";
 }
 
 .ic-list-money:before {
-  content: '\E64E';
+  content: "\E64E";
 }
 
 .ic-shouqi:before {
-  content: '\E649';
+  content: "\E649";
 }
 
 .ic-paid:before {
-  content: '\E64C';
+  content: "\E64C";
 }
 
 .ic-icon_comment_photo:before {
-  content: '\E667';
+  content: "\E667";
 }
 
 .ic-icon_jewel_arrow:before {
-  content: '\E658';
+  content: "\E658";
 }
 
 .ic-icon_jewel_list_bott:before {
-  content: '\E669';
+  content: "\E669";
 }
 
 .ic-icon_jewel_list_top:before {
-  content: '\E66A';
+  content: "\E66A";
 }
 
 .ic-icon_jewel_lv_arrow:before {
-  content: '\E673';
+  content: "\E673";
 }
 
 .ic-xiaoxiyeicon_like:before {
-  content: '\E674';
+  content: "\E674";
 }
 
 .ic-wenzhangyedibu-yizan:before {
-  content: '\E675';
+  content: "\E675";
 }
 
 .ic-wenzhangyedibu-zan:before {
-  content: '\E676';
+  content: "\E676";
 }
 
 .ic-icon_like_dropbox:before {
-  content: '\E677';
+  content: "\E677";
 }
 
 .ic-PCweixian:before {
-  content: '\E678';
+  content: "\E678";
 }
 
 .ic-PClink:before {
-  content: '\E679';
+  content: "\E679";
 }
 
 body,
@@ -8794,7 +8680,7 @@ fieldset[disabled] .btn-success:hover {
   position: absolute;
   top: -10px;
   left: 45%;
-  content: '';
+  content: "";
   display: inline-block;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
@@ -8811,7 +8697,7 @@ fieldset[disabled] .btn-success:hover {
   position: absolute;
   top: 39%;
   left: -10px;
-  content: '';
+  content: "";
   display: inline-block;
   border-left: 9px solid transparent;
   border-top: 9px solid transparent;
@@ -8841,7 +8727,7 @@ fieldset[disabled] .btn-success:hover {
 
 .dropdown-submenu > a:after {
   display: block;
-  content: ' ';
+  content: " ";
   float: right;
   width: 0;
   height: 0;
@@ -9183,7 +9069,7 @@ body.reader-night-mode .side-tool > ul > li a {
 }
 
 .side-tool > ul .dis-entry-wrap .tip:before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   position: absolute;
@@ -9328,7 +9214,7 @@ body.reader-night-mode .notes-placeholder .title {
 }
 
 .notes-placeholder .title:before {
-  content: '' !important;
+  content: "" !important;
 }
 
 .notes-placeholder .sub-title {
@@ -9746,7 +9632,7 @@ body.reader-night-mode .notes-placeholder .meta div {
 }
 
 .trigger-menu li:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -2px;
@@ -10574,7 +10460,7 @@ nav form .arrow-top:before {
 }
 
 nav form.open:after {
-  content: '';
+  content: "";
   position: fixed;
   top: 56px;
   left: 0;
@@ -10625,7 +10511,7 @@ nav .style-mode .popover-modal:before {
   position: absolute;
   top: -10px;
   left: 78%;
-  content: '';
+  content: "";
   display: inline-block;
   border: 9px solid transparent;
   border-top: none;
@@ -10741,7 +10627,7 @@ nav .user .avatar {
 }
 
 nav .user .avatar:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 18px;
   right: -14px;
@@ -10931,46 +10817,17 @@ body.reader-night-mode .note-list blockquote,
 body.reader-night-mode .note-list li,
 body.reader-night-mode .note .follow-detail,
 body.reader-night-mode .note .follow-detail .signature,
-body.reader-night-mode
-.note
-.post
-.article
-.show-content
-.image-package
-.image-caption,
-body.reader-night-mode
-.note
-.post
-.article
-.show-content
-.video-package
-.video-placeholder-area,
+body.reader-night-mode .note .post .article .show-content .image-package .image-caption,
+body.reader-night-mode .note .post .article .show-content .video-package .video-placeholder-area,
 body.reader-night-mode .note .post .article .show-content table td,
 body.reader-night-mode .note .post .article .show-content table th,
 body.reader-night-mode .note .post .comment-list .comment,
 body.reader-night-mode .note .post .comment-list .line-warp,
 body.reader-night-mode .note .post .comment-list .new-comment .sign-container,
 body.reader-night-mode .note .post .comment-list .new-comment textarea,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.open-block,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.open-block
-.open-btn,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.top-title
-.author-only,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .open-block,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .open-block .open-btn,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .top-title .author-only,
 body.reader-night-mode .note .post .comment-list .sub-comment,
 body.reader-night-mode .note .post .comment-list .sub-comment-list,
 body.reader-night-mode .note .post .comment-list .top-title,
@@ -11038,13 +10895,7 @@ body.reader-night-mode nav .user .dropdown-menu {
 body.reader-night-mode .collection .aside .share .share-list a:hover,
 body.reader-night-mode .navbar-default .navbar-nav > li > a:focus,
 body.reader-night-mode .navbar-default .navbar-nav > li > a:hover,
-body.reader-night-mode
-.note
-.post
-.meta-bottom
-.share-group
-.share-list
-a:hover,
+body.reader-night-mode .note .post .meta-bottom .share-group .share-list a:hover,
 body.reader-night-mode .notification .main .dropdown-menu a:hover,
 body.reader-night-mode .overwrite .navbar-nav > .open > a,
 body.reader-night-mode .overwrite .navbar-nav > .open > a:focus,
@@ -11077,14 +10928,7 @@ body.reader-night-mode .note-list .meta a,
 body.reader-night-mode .note-list .meta span,
 body.reader-night-mode .note .post .comment-list .new-comment .cancel,
 body.reader-night-mode .note .post .comment-list .new-comment .emoji i,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.top-title
-.pull-right
-a,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .top-title .pull-right a,
 body.reader-night-mode .notification .main .chat-top .back-to-list,
 body.reader-night-mode .notification .main .chat-top .ic-show,
 body.reader-night-mode .notification .main .comment-list .meta .function-btn,
@@ -11139,11 +10983,7 @@ body.reader-night-mode .modal-header .close,
 body.reader-night-mode .modal-title,
 body.reader-night-mode .navbar-default .dropdown-menu span,
 body.reader-night-mode .navbar-default .navbar-nav .open a.notification-btn,
-body.reader-night-mode
-.navbar-default
-.navbar-nav
-.open
-a.notification-btn:hover,
+body.reader-night-mode .navbar-default .navbar-nav .open a.notification-btn:hover,
 body.reader-night-mode .navbar-default .navbar-nav > li > a,
 body.reader-night-mode .note-bottom .main .include-collection .add-collection,
 body.reader-night-mode .note-bottom .main .include-collection .item,
@@ -11164,22 +11004,8 @@ body.reader-night-mode .note .post .article .title,
 body.reader-night-mode .note .post .comment-list .name,
 body.reader-night-mode .note .post .comment-list .new-comment .cancel:hover,
 body.reader-night-mode .note .post .comment-list .new-comment .emoji i:hover,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.top-title
-.pull-right
-.active,
-body.reader-night-mode
-.note
-.post
-.comment-list
-.normal-comment-list
-.top-title
-.pull-right
-a:hover,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .top-title .pull-right .active,
+body.reader-night-mode .note .post .comment-list .normal-comment-list .top-title .pull-right a:hover,
 body.reader-night-mode .note .post .comment-list .sub-comment-list p,
 body.reader-night-mode .note .post .comment-list .top-title,
 body.reader-night-mode .note .post .comment-list p,
@@ -11199,12 +11025,7 @@ body.reader-night-mode .notification .main .comment-list .info .comment-slogan,
 body.reader-night-mode .notification .main .comment-list .info a.user,
 body.reader-night-mode .notification .main .comment-list .info p,
 body.reader-night-mode .notification .main .comment-list .info span,
-body.reader-night-mode
-.notification
-.main
-.comment-list
-.meta
-.function-btn:hover,
+body.reader-night-mode .notification .main .comment-list .meta .function-btn:hover,
 body.reader-night-mode .notification .main .comment-list .meta .report:hover,
 body.reader-night-mode .notification .main .comment-list a.cancel:hover,
 body.reader-night-mode .notification .main .comment-list p,
@@ -11214,12 +11035,7 @@ body.reader-night-mode .notification .main .follow-list .info .comment-slogan,
 body.reader-night-mode .notification .main .follow-list .info a.user,
 body.reader-night-mode .notification .main .follow-list .info p,
 body.reader-night-mode .notification .main .follow-list .info span,
-body.reader-night-mode
-.notification
-.main
-.follow-list
-.meta
-.function-btn:hover,
+body.reader-night-mode .notification .main .follow-list .meta .function-btn:hover,
 body.reader-night-mode .notification .main .follow-list .meta .report:hover,
 body.reader-night-mode .notification .main .follow-list p,
 body.reader-night-mode .notification .main .jianxin-list .name,
@@ -11237,12 +11053,7 @@ body.reader-night-mode .notification .main .other-list .info .comment-slogan,
 body.reader-night-mode .notification .main .other-list .info a.user,
 body.reader-night-mode .notification .main .other-list .info p,
 body.reader-night-mode .notification .main .other-list .info span,
-body.reader-night-mode
-.notification
-.main
-.other-list
-.meta
-.function-btn:hover,
+body.reader-night-mode .notification .main .other-list .meta .function-btn:hover,
 body.reader-night-mode .notification .main .other-list .meta .report:hover,
 body.reader-night-mode .notification .main .other-list p,
 body.reader-night-mode .notification .main .pay-list .info .comment-slogan,
@@ -11330,23 +11141,9 @@ body.reader-night-mode .notification .main .follow-list .info a:hover,
 body.reader-night-mode .notification .main .like-list .info a,
 body.reader-night-mode .notification .main .like-list .info a:hover,
 body.reader-night-mode .notification .main .message-show .message-l div span a,
-body.reader-night-mode
-.notification
-.main
-.message-show
-.message-l
-div
-span
-a:hover,
+body.reader-night-mode .notification .main .message-show .message-l div span a:hover,
 body.reader-night-mode .notification .main .message-show .message-r div span a,
-body.reader-night-mode
-.notification
-.main
-.message-show
-.message-r
-div
-span
-a:hover,
+body.reader-night-mode .notification .main .message-show .message-r div span a:hover,
 body.reader-night-mode .notification .main .other-list .info a,
 body.reader-night-mode .notification .main .other-list .info a.user,
 body.reader-night-mode .notification .main .other-list .info a:hover,
@@ -11529,11 +11326,7 @@ body.reader-night-mode .navbar-default .navbar-nav .search .search-input {
   color: #c8c8c8;
 }
 
-body.reader-night-mode
-.navbar-default
-.navbar-nav
-.search
-.search-input:-webkit-autofill {
+body.reader-night-mode .navbar-default .navbar-nav .search .search-input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 1000px #4f4f4f !important;
           box-shadow: inset 0 0 0 1000px #4f4f4f !important;
 }
@@ -11542,11 +11335,7 @@ body.reader-night-mode .navbar-default .navbar-nav .open a.notification-btn {
   background-color: transparent !important;
 }
 
-body.reader-night-mode
-.navbar-default
-.navbar-nav
-.open
-a.notification-btn:hover {
+body.reader-night-mode .navbar-default .navbar-nav .open a.notification-btn:hover {
   background-color: #2f2f2f !important;
 }
 
@@ -11619,13 +11408,7 @@ body.reader-night-mode .note .post .article .show-content h6 {
   color: #b1b1b1;
 }
 
-body.reader-night-mode
-.note
-.post
-.article
-.show-content
-.image-package
-.image-container {
+body.reader-night-mode .note .post .article .show-content .image-package .image-container {
   background-color: #545454;
 }
 
@@ -11652,24 +11435,12 @@ body.reader-night-mode .note .post .article .show-content blockquote {
   background-color: #555;
 }
 
-body.reader-night-mode
-.note
-.post
-.comment-list
-.sub-comment-list
-.add-comment-btn:hover,
+body.reader-night-mode .note .post .comment-list .sub-comment-list .add-comment-btn:hover,
 body.reader-night-mode .note .post .comment-list .sub-tool-group a:hover {
   color: #c8c8c8;
 }
 
-body.reader-night-mode
-.note
-.post
-.support-author
-.supporter
-.support-list
-.avatar
-img {
+body.reader-night-mode .note .post .support-author .supporter .support-list .avatar img {
   border-color: #3f3f3f;
 }
 
@@ -11688,13 +11459,7 @@ body.reader-night-mode .note .post .meta-bottom .share-group .popover ul {
   background-color: #3f3f3f;
 }
 
-body.reader-night-mode
-.note
-.post
-.meta-bottom
-.share-group
-.popover
-.arrow:after {
+body.reader-night-mode .note .post .meta-bottom .share-group .popover .arrow:after {
   border-top-color: #3f3f3f;
 }
 
@@ -11732,15 +11497,11 @@ body.reader-night-mode .note-bottom .main .include-collection .item {
 }
 
 body.reader-night-mode .note-bottom .recommend-note .note .title:visited,
-body.reader-night-mode
-.note-bottom
-.seo-recommended-notes
-.note
-.title:visited {
+body.reader-night-mode .note-bottom .seo-recommended-notes .note .title:visited {
   color: #969696;
 }
 
-body.reader-night-mode div[data-pop-layer='1'] {
+body.reader-night-mode div[data-pop-layer="1"] {
   background: #3f3f3f !important;
 }
 
@@ -11908,7 +11669,7 @@ body.reader-night-mode .modal-content {
 }
 
 #navbar-search-tips:before {
-  content: '';
+  content: "";
   left: 27px;
   width: 10px;
   height: 10px;
@@ -11920,7 +11681,7 @@ body.reader-night-mode .modal-content {
 }
 
 #navbar-search-tips:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -11998,7 +11759,7 @@ body.reader-night-mode .modal-content {
   position: relative;
 }
 
-#serial-story-edit .upload-avatar-btn input[type='file'] {
+#serial-story-edit .upload-avatar-btn input[type="file"] {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -12278,7 +12039,7 @@ body.reader-night-mode .modal-content {
 #recommended-modal #recommended-modal-main section .collection i.off:after,
 #recommended-modal #recommended-modal-main section .placeholder i.off:after,
 #recommended-modal #recommended-modal-main section .user i.off:after {
-  content: '';
+  content: "";
   position: absolute;
   top: -1px;
   left: 0;
@@ -12384,7 +12145,7 @@ body.reader-night-mode .modal-content {
 
 #recommended-modal #recommended-footer:before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 100%;
   width: 100%;
@@ -12491,42 +12252,16 @@ body.reader-night-mode .modal-content {
 
 body.reader-night-mode #recommended-modal #recommended-close:hover,
 body.reader-night-mode #recommended-modal #recommended-footer .skip:hover,
-body.reader-night-mode
-#recommended-modal
-#recommended-header
-.action
-.back:hover,
+body.reader-night-mode #recommended-modal #recommended-header .action .back:hover,
 body.reader-night-mode #recommended-modal #recommended-header .title,
 body.reader-night-mode #recommended-modal #recommended-modal-main .back:hover,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.collection
-.info
-.name,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.user
-.info
-.name {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .collection .info .name,
+body.reader-night-mode #recommended-modal #recommended-modal-main section .user .info .name {
   color: #c8c8c8;
 }
 
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.collection
-i:after,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.user
-i:after {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .collection i:after,
+body.reader-night-mode #recommended-modal #recommended-modal-main section .user i:after {
   border-color: #2f2f2f;
   background-color: #3f3f3f;
 }
@@ -12536,52 +12271,22 @@ body.reader-night-mode #recommended-modal #recommended-header {
   background-color: #3f3f3f;
 }
 
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.collection,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.user {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .collection,
+body.reader-night-mode #recommended-modal #recommended-modal-main section .user {
   background-color: #2f2f2f;
 }
 
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.collection:hover,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.user:hover {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .collection:hover,
+body.reader-night-mode #recommended-modal #recommended-modal-main section .user:hover {
   background-color: #282828;
 }
 
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.placeholder {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .placeholder {
   background-color: #2f2f2f;
 }
 
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.placeholder
-.avatar,
-body.reader-night-mode
-#recommended-modal
-#recommended-modal-main
-section
-.placeholder
-.name {
+body.reader-night-mode #recommended-modal #recommended-modal-main section .placeholder .avatar,
+body.reader-night-mode #recommended-modal #recommended-modal-main section .placeholder .name {
   background-color: #505050;
 }
 
@@ -12600,12 +12305,12 @@ body.reader-night-mode #recommended-modal #recommended-footer:before {
   margin: 0 15px;
 }
 
-.beta span {
+.beta a {
   width: 100%;
   height: 100%;
 }
 
-.beta span img {
+.beta a img {
   height: 25px;
 }
 /*# sourceMappingURL=index.css.map */
