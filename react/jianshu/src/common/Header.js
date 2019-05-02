@@ -7,29 +7,29 @@ class Header extends Component {
 		return (
 			<nav className="navbar navbar-default navbar-fixed-top">
 				<div className="width-limit">
-					<div className="logo">
+					<a className="logo" href="/">
 						<img src={navLogo} alt="Nav logo" />
-					</div>
+					</a>
 
-					<a className="btn write-btn" target="_blank">
+					<a className="btn write-btn" target="_blank" href="/">
 						<i className="iconfont ic-write" />
 						写文章
 					</a>
-					<a className="btn sign-up" id="sign_up">
+					<a className="btn sign-up" id="sign_up" href="/">
 						注册
 					</a>
-					<a className="btn log-in" id="sign_in">
+					<a className="btn log-in" id="sign_in" href="/">
 						登录
 					</a>
 
 					<div className="beta">
-						<a>
+						<a href="/">
 							<img src={navBeta} alt="beta" />
 						</a>
 					</div>
 
 					<div className="style-mode">
-						<a className="style-mode-btn">
+						<a className="style-mode-btn" href="/">
 							<i className="iconfont ic-navigation-mode" />
 						</a>
 					</div>
@@ -69,7 +69,7 @@ class Header extends Component {
 											placeholder="搜索"
 											className="search-input"
 										/>
-										<a className="search-btn">
+										<a className="search-btn" href="/">
 											<i className="iconfont ic-search" />
 										</a>
 									</form>
