@@ -11,9 +11,9 @@ const connection = mysql.createConnection('mysql://root:xxxx@localhost/demo1');
 connection.connect(err => {
   if (err) throw err;
 
-  // const sql = 'select * from class101';
+  const sql = 'select * from class101';
 
-  connection.query('SELECT * FROM class101', (err, result, fields) => {
+  connection.query(sql, (err, result, fields) => {
     if (err) throw err;
     console.log(result[0].name);
     console.log('\n');
